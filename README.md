@@ -29,7 +29,7 @@ Personal research site. Built by GitHub Pages with Jekyll; no build step needed 
 | add a news item             | `_data/news.yml`                                       |
 | add your CV                 | put the PDF at `assets/cv.pdf`, edit `cv.md`           |
 | change the look             | `assets/css/style.css`                                 |
-| swap the home animation     | `hero_video` in `_config.yml`                          |
+| tune or turn off the banner | `hero_*` settings in `_config.yml`; the animation is `assets/js/landscape.js` |
 
 Then commit and push; GitHub rebuilds the site automatically.
 
@@ -57,6 +57,19 @@ Keep videos short and small (ffmpeg, H.264, no audio). This shrinks one to ~0.5 
 ```bash
 ffmpeg -i in.mp4 -an -vf "scale=900:-2,format=yuv420p" -c:v libx264 -crf 30 -movflags +faststart out.mp4
 ```
+
+## The home-page banner
+
+The banner is a live WebGL flight through a loss landscape (`assets/js/landscape.js`, no dependencies).
+The camera follows an optimizer down a winding ravine; the gold dots are its steps, zig-zagging
+between the valley walls the way SGD does when the problem is ill-conditioned.
+
+- Pauses when scrolled out of view or in a background tab; drops resolution on slow devices.
+- Shows a still frame for visitors who ask their system for reduced motion.
+- Falls back to `hero_video` when a browser has no WebGL2.
+- `/?t0=120` starts the flight two minutes in, handy for screenshots.
+- Shape of the landscape: `rel()` (defined twice, in JS and GLSL; keep them identical).
+  Colours: `TERRAIN_FS` and `SKY_FS`. Speed and camera: `SPEED`, `EYE`, `TILT` at the top.
 
 ## Local preview (optional)
 

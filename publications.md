@@ -1,5 +1,6 @@
 ---
 title: Publications
+class: page-wide
 ---
 {% assign pubs = site.data.publications %}
 {% if site.author.scholar != "" %}<p class="muted">Full list on <a href="{{ site.author.scholar }}">Google Scholar</a>.</p>{% endif %}

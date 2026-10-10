@@ -15,7 +15,12 @@ author:
   orcid: ""            # e.g. 0000-0000-0000-0000
   linkedin: ""         # full LinkedIn URL
 
-# Looping animation behind the name on the home page. Set hero_video to "" to turn it off.
+# Home page banner.
+# hero_landscape: live 3D flight through a loss landscape (WebGL). Set to false to use the video instead.
+# hero_hud: the small "step / loss / lr" read-out in the corner of the banner.
+# hero_video: shown when hero_landscape is false, or when a browser has no WebGL.
+hero_landscape: true
+hero_hud: true
 hero_video: /assets/video/loss-surface.mp4
 hero_poster: /assets/video/loss-surface-poster.jpg
 

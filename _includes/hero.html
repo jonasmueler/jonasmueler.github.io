@@ -1,0 +1,23 @@
+{% assign live = site.hero_landscape %}
+<section class="hero{% unless live %} no-webgl{% endunless %}">
+  {% if live %}<canvas id="landscape" class="hero-canvas" aria-hidden="true"></canvas>{% endif %}
+  {% if site.hero_video and site.hero_video != "" %}
+  <video class="hero-fallback" muted loop playsinline preload="none"{% unless live %} autoplay{% endunless %}
+         poster="{{ site.hero_poster | relative_url }}" aria-hidden="true">
+    <source src="{{ site.hero_video | relative_url }}" type="video/mp4">
+  </video>
+  {% endif %}
+  <div class="hero-shade" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-text">
+      {% if site.author.photo and site.author.photo != "" %}
+      <img class="profile-photo" src="{{ site.author.photo | relative_url }}" alt="{{ site.author.name }}">
+      {% endif %}
+      <h1 class="intro-name">{{ site.author.name }}</h1>
+      <p class="intro-role">Machine learning researcher</p>
+      {% include links.html %}
+    </div>
+  </div>
+  {% if live and site.hero_hud %}<div class="wrap hero-hud" aria-hidden="true"><span id="landscape-hud"></span></div>{% endif %}
+</section>
+{% if live %}<script src="{{ '/assets/js/landscape.js' | relative_url }}" defer></script>{% endif %}
