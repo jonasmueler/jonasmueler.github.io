@@ -36,6 +36,21 @@ class: page-wide
 {% endfor %}
 <p class="muted course-privacy">Videos are loaded from YouTube only after you press play.</p>
 
+{% if site.data.books.size > 0 %}
+<h2>Books</h2>
+<div class="books">
+{% for b in site.data.books %}
+  <article class="book">
+    <h3 class="book-title">{{ b.title }}</h3>
+    {% if b.subtitle %}<p class="book-subtitle">{{ b.subtitle }}</p>{% endif %}
+    <p class="book-meta">{{ b.authors }} · {{ b.published }}{% if b.free %} <span class="tag">Free</span>{% endif %}</p>
+    {% if b.note %}<p class="book-note">{{ b.note }}</p>{% endif %}
+    {% if b.links %}<div class="pub-links">{% for l in b.links %}<a href="{{ l[1] }}" target="_blank" rel="noopener">{{ l[0] }}</a>{% endfor %}</div>{% endif %}
+  </article>
+{% endfor %}
+</div>
+{% endif %}
+
 {% assign items = site.materials | sort: "updated" | reverse %}
 {% if items.size > 0 %}
 <h2>Tutorials and notes</h2>

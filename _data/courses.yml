@@ -33,7 +33,7 @@ groups:
         embed: true
         lang: German
 
-  - name: "Deep learning and generative models"
+  - name: "Deep learning, computer vision and generative models"
     courses:
       - title: "Deep Learning"
         by: "Andreas Geiger"
@@ -41,6 +41,13 @@ groups:
         lectures: 46
         list: PL05umP7R6ij3NTWIdtMbfvX7Z-4WEXRqD
         thumb: BHBAnUAdeyE
+        embed: true
+      - title: "Computer Vision"
+        by: "Andreas Geiger"
+        org: "University of Tübingen"
+        lectures: 46
+        list: PL05umP7R6ij35L2MHGzis8AEHz7mg381_
+        thumb: YW1cIaOBkI8
         embed: true
       - title: "Deep Generative Models (CS236)"
         by: "Stefano Ermon"

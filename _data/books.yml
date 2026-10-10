@@ -1,0 +1,34 @@
+# Books on the Learning Materials page. "links" are shown as buttons in the order given.
+
+- title: "Deep Learning"
+  authors: "Ian Goodfellow, Yoshua Bengio, Aaron Courville"
+  published: "MIT Press, 2016"
+  note: "The standard textbook on deep learning, from the linear algebra and probability it rests on to modern architectures."
+  free: true
+  links:
+    "Read online": "https://www.deeplearningbook.org/"
+
+- title: "Vision"
+  subtitle: "A Computational Investigation into the Human Representation and Processing of Visual Information"
+  authors: "David Marr"
+  published: "MIT Press, 1982; reissued 2010"
+  note: "The classic account of vision as information processing, and the origin of the computational, algorithmic and implementational levels of analysis."
+  links:
+    "Publisher": "https://doi.org/10.7551/mitpress/9780262514620.001.0001"
+
+- title: "Principles of Synthetic Intelligence"
+  subtitle: "PSI: An Architecture of Motivated Cognition"
+  authors: "Joscha Bach"
+  published: "Oxford University Press, 2009"
+  note: "A cognitive architecture that ties perception, memory, motivation and emotion together, built on Dörner's PSI theory and implemented as MicroPSI."
+  links:
+    "Publisher": "https://doi.org/10.1093/acprof:oso/9780195370676.001.0001"
+
+- title: "The Matrix Cookbook"
+  authors: "Kaare Brandt Petersen, Michael Syskind Pedersen"
+  published: "Technical University of Denmark, 2012"
+  note: "A desktop reference of matrix identities, derivatives and approximations."
+  free: true
+  links:
+    "PDF": "http://www2.imm.dtu.dk/pubdb/views/edoc_download.php/3274/pdf/imm3274.pdf"
+    "DTU page": "https://www2.compute.dtu.dk/pubdb/pubs/3274-full.html"
