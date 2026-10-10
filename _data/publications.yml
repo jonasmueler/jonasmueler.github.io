@@ -11,6 +11,11 @@
     arxiv: "https://arxiv.org/abs/2608.09579"
     pdf: "https://arxiv.org/pdf/2608.09579"
 
+- title: "AI Behavioral Evaluation Should Be Grounded in Psychophysics Across Marr's Levels"
+  authors: "**Jonas Leo Müller**, Bernhard Egger, Marco Valentino, Pasquale Minervini, Antonio Rizzo, Björn Eskofier, Dario Zanca"
+  venue: "Conference on Neural Information Processing Systems (NeurIPS), Position Paper Track, to appear"
+  year: 2026
+
 - title: "Learning Biomechanically Plausible Human Motion from Sparse Radar Point Clouds"
   authors: "**Jonas Leo Mueller**, Markus Gambietz, Alexander Weiss, Daniel Krauss, Bjoern M. Eskofier"
   venue: "arXiv preprint arXiv:2608.03637"

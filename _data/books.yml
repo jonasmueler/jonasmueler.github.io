@@ -16,6 +16,14 @@
   links:
     "Publisher": "https://doi.org/10.7551/mitpress/9780262514620.001.0001"
 
+- title: "Computational Vision"
+  subtitle: "Information Processing in Perception and Visual Behavior"
+  authors: "Hanspeter A. Mallot"
+  published: "MIT Press, 2000"
+  note: "Vision as information processing, from image formation and early vision to perception and visual behaviour, with the models behind each step."
+  links:
+    "Publisher": "https://direct.mit.edu/books/monograph/4724/Computational-VisionInformation-Processing-in"
+
 - title: "Principles of Synthetic Intelligence"
   subtitle: "PSI: An Architecture of Motivated Cognition"
   authors: "Joscha Bach"
