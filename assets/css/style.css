@@ -198,3 +198,26 @@ pre code { background: none; padding: 0; font-size: 0.85rem; }
 .material-head { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-weight: 600; }
 .material-head .tag { font-weight: 400; }
 @media (max-width: 560px) { .site-nav { gap: 4px 12px; font-size: 0.86rem; } }
+
+/* course cards on the Learning Materials page */
+.courses { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 28px 24px; margin: 1em 0 2.4em; }
+.course { display: flex; flex-direction: column; }
+.course-media, .course-frame {
+  position: relative; display: block; width: 100%; aspect-ratio: 16 / 9; padding: 0; border: 0;
+  border-radius: 10px; overflow: hidden; background: #000; cursor: pointer;
+}
+.course-media img { width: 100%; height: 100%; object-fit: cover; display: block; transform: scale(1.035); transition: transform .35s ease, filter .35s ease; }
+.course-media:hover img, .course-media:focus-visible img { transform: scale(1.07); filter: brightness(0.85); }
+.course-media:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.course-play { position: absolute; inset: 0; display: grid; place-items: center; transition: transform .2s ease; }
+.course-media:hover .course-play svg path:first-child { fill: #f00; fill-opacity: 1; }
+.course-external {
+  position: absolute; right: 10px; bottom: 10px; padding: 4px 10px; border-radius: 6px;
+  background: rgba(0,0,0,0.72); color: #fff; font-size: 0.8rem;
+}
+.course-body { padding-top: 12px; }
+.course-title { font-family: var(--sans); font-size: 1.02rem; font-weight: 600; margin: 0 0 4px; line-height: 1.35; }
+.course-meta { margin: 0 0 6px; color: var(--muted); font-size: 0.9rem; display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: center; }
+.course-link { font-size: 0.88rem; }
+.course-privacy { font-size: 0.85rem; margin-top: -1em; }
+.course-meta .tag { text-transform: none; }

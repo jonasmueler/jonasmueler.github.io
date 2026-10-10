@@ -1,0 +1,65 @@
+# Recommended video courses on the Learning Materials page.
+# Fields:
+#   list:     YouTube playlist id (the part after "list=" in the URL)
+#   thumb:    image in assets/img/courses/ (named after a video id from the playlist)
+#   embed:    false when the channel has turned off playback on other websites;
+#             the card then opens the playlist on YouTube instead of playing in place
+#   lectures: number of videos in the playlist (as of October 2026)
+#   lang:     set only when the course is not in English
+
+groups:
+  - name: "Mathematical and computational foundations"
+    courses:
+      - title: "Linear Algebra (MIT 18.06)"
+        by: "Gilbert Strang"
+        org: "MIT, Spring 2005"
+        lectures: 35
+        list: PL49CF3715CB9EF31D
+        thumb: ZK3O402wf1c
+        embed: true
+      - title: "Mathematics for Machine Learning"
+        by: "Ulrike von Luxburg"
+        org: "University of Tübingen, 2020/21"
+        lectures: 89
+        list: PL05umP7R6ij1a6KdEy8PVE9zoCv6SlHRS
+        thumb: PZwxF59DhYA
+        embed: false
+      - title: "Informatik 2"
+        by: "Torsten Grust"
+        org: "University of Tübingen, Summer 2021"
+        lectures: 80
+        list: PL1XF9qjV8kH2EZdv-KGsRPCiTrJBqy2Ry
+        thumb: YgLOW6vRlFo
+        embed: true
+        lang: German
+
+  - name: "Deep learning and generative models"
+    courses:
+      - title: "Deep Learning"
+        by: "Andreas Geiger"
+        org: "University of Tübingen"
+        lectures: 46
+        list: PL05umP7R6ij3NTWIdtMbfvX7Z-4WEXRqD
+        thumb: BHBAnUAdeyE
+        embed: true
+      - title: "Deep Generative Models (CS236)"
+        by: "Stefano Ermon"
+        org: "Stanford, 2023"
+        lectures: 18
+        list: PLoROMvodv4rPOWA-omMM6STXaWW4FvJT8
+        thumb: XZ0PMRWXBEU
+        embed: true
+      - title: "Flow Matching and Diffusion Models (6.S184)"
+        by: "Peter Holderrieth"
+        org: "MIT, 2026"
+        lectures: 6
+        list: PL57nT7tSGAAXwjhDYcxEycx5W7YoSrZyt
+        thumb: ngC3QnYSVNM
+        embed: true
+      - title: "Transformers and Large Language Models (CME295)"
+        by: ""
+        org: "Stanford, Autumn 2025"
+        lectures: 9
+        list: PLoROMvodv4rOCXd21gf0CF4xr35yINeOy
+        thumb: Ub3GoFaUcds
+        embed: false
