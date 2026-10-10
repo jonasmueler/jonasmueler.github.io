@@ -149,20 +149,15 @@ pre code { background: none; padding: 0; font-size: 0.85rem; }
 .hero .intro-role { color: #c3cfdd; margin: 6px 0 16px; font-size: 1.2rem; }
 .hero .profile-links a { color: #a5c8f5; }
 .hero .profile-photo { width: 96px; height: 96px; margin-bottom: 16px; border: 2px solid rgba(255,255,255,0.25); }
-.hero-caption {
-  position: absolute; left: 0; right: 0; bottom: 16px; margin: 0 auto;
-  text-align: right; font-size: 0.78rem; color: rgba(200,215,235,0.5); pointer-events: none;
-}
 /* the header floats over the banner */
 .has-hero .site-header { position: absolute; top: 0; left: 0; right: 0; z-index: 5; border-bottom-color: rgba(255,255,255,0.08); }
 .has-hero .site-title { color: #fff; }
 .has-hero .site-nav a { color: rgba(225,235,250,0.72); }
 .has-hero .site-nav a[aria-current="page"] { color: #fff; }
-.hero-clean .hero-shade, .hero-clean .hero-inner, .hero-clean .hero-caption, .hero-clean .site-header { display: none; }
+.hero-clean .hero-shade, .hero-clean .hero-inner, .hero-clean .site-header { display: none; }
 @media (max-width: 560px) {
   .hero { height: clamp(440px, 74vh, 640px); justify-content: flex-end; padding-bottom: 52px; }
   .hero-shade { background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0.7) 100%); }
-  .hero-caption { text-align: left; font-size: 0.72rem; }
 }
 
 /* figures */

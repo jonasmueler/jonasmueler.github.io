@@ -253,12 +253,12 @@
     var aspect = canvas.width / canvas.height;
     var wide = aspect > 1.25;
     var az = 0.6 + t * 2 * Math.PI / ORBIT;
-    var el = (40 + 4 * Math.sin(t * 2 * Math.PI / 80)) * Math.PI / 180;
+    var el = (52 + 4 * Math.sin(t * 2 * Math.PI / 80)) * Math.PI / 180;
     var R = wide ? 3.55 : 4.8;
     var target = [0, -0.75 * ZS, 0];
     var eye = [target[0] + R * Math.cos(el) * Math.sin(az), target[1] + R * Math.sin(el), target[2] + R * Math.cos(el) * Math.cos(az)];
     var fovy = wide ? 34 * Math.PI / 180 : Math.min(2 * Math.atan(Math.tan(36 * Math.PI / 180) / aspect), 72 * Math.PI / 180);
-    var vp = mul(perspective(fovy, aspect, 0.05, 50, wide ? 0.22 : 0), lookAt(eye, target));
+    var vp = mul(perspective(fovy, aspect, 0.05, 50, 0), lookAt(eye, target));
 
     gl.viewport(0, 0, canvas.width, canvas.height);
     gl.clearColor(0, 0, 0, 1);
