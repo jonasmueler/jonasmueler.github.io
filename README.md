@@ -61,8 +61,8 @@ ffmpeg -i in.mp4 -an -vf "scale=900:-2,format=yuv420p" -c:v libx264 -crf 30 -mov
 ## The home-page banner
 
 A live WebGL rendering (`assets/js/surface.js`, no dependencies) of the loss surface from the
-original animation: three Gaussian wells plus ripples, matplotlib's "Blues" colormap, a faint grid,
-and a contour map of the same function on a floor below. Gradient descent with momentum is computed
+original animation: three Gaussian wells plus ripples, matplotlib's "Blues" colormap and a faint grid.
+Gradient descent with momentum is computed
 from the formula and drawn as a path rolling into a minimum; four start points play in turn.
 
 - It is turned on per page with `hero: true` in the front matter (only the home page uses it).

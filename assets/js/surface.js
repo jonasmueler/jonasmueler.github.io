@@ -3,9 +3,8 @@
  *
  * The surface is the same function as the original matplotlib animation
  * (three Gaussian wells plus ripples), drawn with matplotlib's "Blues" colormap.
- * Beneath it, a floor shows the same function as contour lines, like a textbook figure.
  * A gradient-descent-with-momentum path is computed from the formula and drawn
- * on the surface and as a shadow on the contour map.
+ * on the surface.
  *
  * Plain WebGL2, no dependencies. Without WebGL2 the poster image stays visible.
  */
@@ -45,7 +44,6 @@
 
   var ZMIN = -1.525, ZMAX = -0.096;   // range of f on [-2, 2]^2
   var ZS = 1.45;                      // vertical exaggeration, close to the matplotlib box aspect
-  var FLOOR = (ZMIN - 0.55) * ZS;     // height of the contour-map floor
 
   // matplotlib "Blues", 9 stops
   var GLSL_BLUES = [
@@ -100,25 +98,6 @@
     '}'
   ].join('\n');
 
-  var FLOOR_VS = HEAD + [
-    'in vec2 aXY; uniform mat4 uVP; uniform float uY; out vec2 vXY;',
-    'void main(){ vXY = aXY; gl_Position = uVP*vec4(aXY.x, uY, aXY.y, 1.0); }'
-  ].join('\n');
-
-  var FLOOR_FS = HEAD + GLSL_F + '\n' + GLSL_BLUES + '\n' + [
-    'in vec2 vXY; uniform vec2 uZr; out vec4 o;',
-    'void main(){',
-    '  float z = f(vXY.x, vXY.y);',
-    '  float t = (z - uZr.x)/(uZr.y - uZr.x);',
-    '  float q = z/0.075; float w = fwidth(q);',
-    '  float line = 1.0 - min(abs(fract(q - 0.5) - 0.5)/max(w, 1e-4), 1.0);',
-    '  float inside = 1.0 - smoothstep(2.4, 3.4, length(vXY));',
-    '  vec3 lc = mix(vec3(0.62, 0.79, 0.88), vec3(0.13, 0.44, 0.71), t);',
-    '  vec3 col = lc*line*0.55 + blues(t)*0.045;',
-    '  o = vec4(col*inside, 1.0);',
-    '}'
-  ].join('\n');
-
   var PATH_VS = HEAD + [
     'in vec3 aP; in vec2 aSA;',
     'uniform mat4 uVP; uniform float uScale;',
@@ -149,10 +128,9 @@
     if (!gl.getProgramParameter(p, gl.LINK_STATUS)) throw new Error(gl.getProgramInfoLog(p));
     return p;
   }
-  var surfProg, floorProg, pathProg;
+  var surfProg, pathProg;
   try {
     surfProg = program(SURF_VS, SURF_FS);
-    floorProg = program(FLOOR_VS, FLOOR_FS);
     pathProg = program(PATH_VS, PATH_FS);
   } catch (e) {
     if (window.console) console.warn('surface:', e);
@@ -164,7 +142,6 @@
     return u;
   }
   var Us = uniforms(surfProg, ['uVP', 'uZS', 'uZr', 'uEye']);
-  var Uf = uniforms(floorProg, ['uVP', 'uY', 'uZr']);
   var Up = uniforms(pathProg, ['uVP', 'uScale', 'uMode', 'uColor']);
 
   // ------------------------------------------------------------------ geometry
@@ -182,12 +159,6 @@
   gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer()); gl.bufferData(gl.ARRAY_BUFFER, xy, gl.STATIC_DRAW);
   var loc = gl.getAttribLocation(surfProg, 'aXY'); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
   gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, gl.createBuffer()); gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, idx, gl.STATIC_DRAW);
-
-  var floorVao = gl.createVertexArray();
-  gl.bindVertexArray(floorVao);
-  gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
-  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-3.4, -3.4, 3.4, -3.4, -3.4, 3.4, 3.4, 3.4]), gl.STATIC_DRAW);
-  loc = gl.getAttribLocation(floorProg, 'aXY'); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
 
   var MAXP = 900;
   var pathData = new Float32Array(MAXP * 5);
@@ -265,13 +236,6 @@
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
     gl.enable(gl.DEPTH_TEST);
 
-    gl.useProgram(floorProg);
-    gl.uniformMatrix4fv(Uf.uVP, false, vp);
-    gl.uniform1f(Uf.uY, FLOOR);
-    gl.uniform2f(Uf.uZr, ZMIN, ZMAX);
-    gl.bindVertexArray(floorVao);
-    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
-
     gl.useProgram(surfProg);
     gl.uniformMatrix4fv(Us.uVP, false, vp);
     gl.uniform1f(Us.uZS, ZS);
@@ -290,14 +254,13 @@
     var shown = Math.min(pts.length, Math.floor(tt * STEPS_PER_SEC) + 1);
     var fade = 1 - Math.max(0, Math.min(1, (tt - (pts.length / STEPS_PER_SEC + HOLD)) / FADE));
 
-    // path on the surface, then its shadow on the floor
+    // path on the surface
     var n = 0, s;
     function put(x, y, h, size, alpha) {
       var o = n * 5; pathData[o] = x; pathData[o + 1] = h; pathData[o + 2] = y; pathData[o + 3] = size; pathData[o + 4] = alpha; n++;
     }
     for (s = 0; s < shown; s++) put(pts[s][0], pts[s][1], f(pts[s][0], pts[s][1]) * ZS + 0.015, 0.03, fade);
     var onSurface = n;
-    for (s = 0; s < shown; s++) put(pts[s][0], pts[s][1], FLOOR + 0.003, 0.02, fade * 0.6);
     gl.bindBuffer(gl.ARRAY_BUFFER, pathBuf);
     gl.bufferSubData(gl.ARRAY_BUFFER, 0, pathData.subarray(0, n * 5));
 
@@ -309,7 +272,6 @@
     gl.enable(gl.BLEND); gl.blendFunc(gl.ONE, gl.ONE); gl.depthMask(false);
     gl.uniform1i(Up.uMode, 1);
     if (onSurface > 1) gl.drawArrays(gl.LINE_STRIP, 0, onSurface);
-    if (n - onSurface > 1) gl.drawArrays(gl.LINE_STRIP, onSurface, n - onSurface);
     gl.uniform1i(Up.uMode, 0);
     if (onSurface > 0) {
       // every fourth step as a dot, the newest one larger
