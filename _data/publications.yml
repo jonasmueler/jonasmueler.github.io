@@ -5,8 +5,8 @@
 
 - title: "You Only Flow Once: Calibrated and Real-Time Radar Pose Estimation with Multi-Hypothesis Normalizing Flows"
   authors: "**Jonas Leo Mueller**, Sebastian Hoefler, Dario Zanca, Naga Venkata Sai Jitin Jami, Thomas Altstidl, Bjoern M. Eskofier"
-  venue: "arXiv preprint arXiv:2608.09579"
-  year: 2026
+  venue: "IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), to appear"
+  year: 2027
   links:
     arxiv: "https://arxiv.org/abs/2608.09579"
     pdf: "https://arxiv.org/pdf/2608.09579"
@@ -28,8 +28,8 @@
 
 - title: "RadProPoser: Probabilistic Radar Tensor Human Pose Estimation That Knows Its Limits"
   authors: "**Jonas Leo Mueller**, Lukas Engel, Eva Dorschky, Daniel Krauss, Ingrid Ullmann, Martin Vossiek, Bjoern M. Eskofier"
-  venue: "arXiv preprint arXiv:2508.03578"
-  year: 2025
+  venue: "International Joint Conference on Neural Networks (IJCNN)"
+  year: 2026
   links:
     arxiv: "https://arxiv.org/abs/2508.03578"
     pdf: "https://arxiv.org/pdf/2508.03578"
