@@ -1,24 +1,8 @@
 ---
 layout: default
 title: About
+hero: true
 ---
-<section class="hero">
-  {% if site.hero_video != "" %}
-  <video class="hero-media" autoplay muted loop playsinline preload="metadata"
-         poster="{{ site.hero_poster | relative_url }}" aria-hidden="true">
-    <source src="{{ site.hero_video | relative_url }}" type="video/mp4">
-  </video>
-  {% endif %}
-  <div class="hero-text">
-    {% if site.author.photo != "" %}
-    <img class="profile-photo" src="{{ site.author.photo | relative_url }}" alt="{{ site.author.name }}">
-    {% endif %}
-    <h1 class="intro-name">{{ site.author.name }}</h1>
-    <p class="intro-role">Machine learning researcher</p>
-    {% include links.html %}
-  </div>
-</section>
-
 <div class="home-grid">
 <div class="home-main" markdown="1">
 

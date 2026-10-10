@@ -3,8 +3,9 @@
 <head>
 {% include head.html %}
 </head>
-<body>
+<body{% if page.hero %} class="has-hero"{% endif %}>
 {% include header.html %}
+{% if page.hero %}{% include hero.html %}{% endif %}
 <main class="wrap">
 {{ content }}
 </main>

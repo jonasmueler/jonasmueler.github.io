@@ -1,0 +1,16 @@
+<section class="hero" style="--poster: url('{{ '/assets/img/hero-poster.jpg' | relative_url }}')">
+  <canvas id="surface" class="hero-canvas" aria-hidden="true"></canvas>
+  <div class="hero-shade" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-text">
+      {% if site.author.photo and site.author.photo != "" %}
+      <img class="profile-photo" src="{{ site.author.photo | relative_url }}" alt="{{ site.author.name }}">
+      {% endif %}
+      <h1 class="intro-name">{{ site.author.name }}</h1>
+      <p class="intro-role">Machine learning researcher</p>
+      {% include links.html %}
+    </div>
+  </div>
+  <p class="wrap hero-caption">Gradient descent with momentum on a non-convex loss surface</p>
+</section>
+<script src="{{ '/assets/js/surface.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>

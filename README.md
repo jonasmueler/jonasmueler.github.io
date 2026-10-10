@@ -29,7 +29,7 @@ Personal research site. Built by GitHub Pages with Jekyll; no build step needed 
 | add a news item             | `_data/news.yml`                                       |
 | add your CV                 | put the PDF at `assets/cv.pdf`, edit `cv.md`           |
 | change the look             | `assets/css/style.css`                                 |
-| swap the home animation     | `hero_video` in `_config.yml`                          |
+| change the home banner      | `assets/js/surface.js` (see below)                     |
 
 Then commit and push; GitHub rebuilds the site automatically.
 
@@ -57,6 +57,19 @@ Keep videos short and small (ffmpeg, H.264, no audio). This shrinks one to ~0.5 
 ```bash
 ffmpeg -i in.mp4 -an -vf "scale=900:-2,format=yuv420p" -c:v libx264 -crf 30 -movflags +faststart out.mp4
 ```
+
+## The home-page banner
+
+A live WebGL rendering (`assets/js/surface.js`, no dependencies) of the loss surface from the
+original animation: three Gaussian wells plus ripples, matplotlib's "Blues" colormap, a faint grid,
+and a contour map of the same function on a floor below. Gradient descent with momentum is computed
+from the formula and drawn as a path rolling into a minimum; four start points play in turn.
+
+- It is turned on per page with `hero: true` in the front matter (only the home page uses it).
+- Speed: `ORBIT` (seconds per turn). Camera: `el`, `R`, `fovy` in `draw()`. Surface: `f()`, defined twice (JS and GLSL), keep both identical.
+- Pauses when out of view or in a background tab. Shows a still frame for reduced-motion visitors.
+- Without WebGL the still image `assets/img/hero-poster.jpg` is shown. To remake it, open `/?clean&t0=95` and screenshot the banner.
+- `/?t0=60` starts the animation a minute in.
 
 ## Local preview (optional)
 
