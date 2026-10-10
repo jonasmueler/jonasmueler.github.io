@@ -11,7 +11,7 @@ author:
   photo: ""            # e.g. /assets/img/profile.jpg
   email: ""
   github: jonasmueler
-  scholar: ""          # full Google Scholar profile URL
+  scholar: "https://scholar.google.com/citations?user=T_DDMYsAAAAJ"
   orcid: ""            # e.g. 0000-0000-0000-0000
   linkedin: ""         # full LinkedIn URL
 
@@ -20,6 +20,8 @@ nav:
     url: /
   - title: Publications
     url: /publications/
+  - title: Learning Materials
+    url: /materials/
   - title: Blog
     url: /blog/
   - title: CV
@@ -33,8 +35,15 @@ kramdown:
 
 permalink: /blog/:year/:title/
 
+collections:
+  materials:
+    output: true
+    permalink: /materials/:name/
+
 defaults:
   - scope: { path: "", type: posts }
+    values: { layout: post }
+  - scope: { path: "", type: materials }
     values: { layout: post }
   - scope: { path: "" }
     values: { layout: page }

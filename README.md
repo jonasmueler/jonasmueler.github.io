@@ -24,8 +24,9 @@ Personal research site. Built by GitHub Pages with Jekyll; no build step needed 
 |-----------------------------|--------------------------------------------------------|
 | change name, links, menu    | `_config.yml`                                          |
 | write a blog post           | new file `_posts/YYYY-MM-DD-title.md`                  |
+| add learning material       | new file in `_materials/` (copy `_materials/example-template.md`) |
 | add a paper                 | `_data/publications.yml` (+ teaser in `assets/img/pubs/`) |
-| add your CV                 | put the PDF at `assets/cv.pdf`, edit `cv.md`           |
+| update your CV              | `_data/cv.yml`                                         |
 | change the look             | `assets/css/style.css`                                 |
 | change the home banner      | `assets/js/surface.js` (see below)                     |
 
