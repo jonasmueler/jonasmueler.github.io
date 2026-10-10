@@ -3,7 +3,6 @@ title: Learning Materials
 permalink: /materials/
 class: page-wide
 ---
-<p class="muted">Lecture series I recommend, and my own tutorials and notes.</p>
 
 {% for g in site.data.courses.groups %}
 <h2>{{ g.name }}</h2>
