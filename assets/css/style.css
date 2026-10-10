@@ -29,12 +29,13 @@
 }
 
 * { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; font-size: 112.5%; }   /* 18px base; every rem size scales with it */
+@media (max-width: 700px) { html { font-size: 100%; } }
 body {
   margin: 0;
   background: var(--bg);
   color: var(--fg);
-  font: 17px/1.65 var(--sans);
+  font: 1rem/1.65 var(--sans);
 }
 .wrap { padding: 0 var(--gutter); }
 /* long-form text keeps a readable line length */
@@ -174,9 +175,9 @@ pre code { background: none; padding: 0; font-size: 0.85rem; }
 
 /* home: one readable column under the banner */
 .has-hero main.wrap { padding-top: 56px; }
-.home-about { max-width: 760px; }
-.home-about h2 { margin-top: 1.6em; }
-.home-about h2:first-child { margin-top: 0.4em; }
+.home-about { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 72px; max-width: 1320px; }
+.home-about h2 { margin-top: 0.4em; }
+@media (max-width: 900px) { .home-about { grid-template-columns: 1fr; } }
 .interests { list-style: none; padding: 0; margin: 1.2em 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
 .interests li { padding: 4px 14px; border-radius: 999px; border: 1px solid var(--line); font-size: 0.92rem; }
 

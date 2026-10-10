@@ -3,13 +3,17 @@ layout: default
 title: About
 hero: true
 ---
-<div class="home-about" markdown="1">
+<div class="home-about">
+<section class="home-col" markdown="1">
 
 ## About
 
 I am a PhD researcher at the [Department of Artificial Intelligence in Biomedical Engineering (AIBE)](https://aibe.tf.fau.de/)
 at Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU), where I also lead the **Applied Machine Learning Group**.
 I am also associated with the **Institute for Artificial Intelligence in Medicine** at LMU Munich.
+
+</section>
+<section class="home-col" markdown="1">
 
 ## Research
 
@@ -25,4 +29,5 @@ The problems I work on include:
   <li>Biomechanics</li>
 </ul>
 
+</section>
 </div>
