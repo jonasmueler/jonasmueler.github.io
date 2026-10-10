@@ -9,11 +9,11 @@ author:
   name: Jonas Müller
   # Fill in what you want shown on the home page. Empty values are hidden.
   photo: ""            # e.g. /assets/img/profile.jpg
-  email: ""
+  email: "jonas.leo.mueller@fau.de"
   github: jonasmueler
   scholar: "https://scholar.google.com/citations?user=T_DDMYsAAAAJ"
   orcid: ""            # e.g. 0000-0000-0000-0000
-  linkedin: ""         # full LinkedIn URL
+  linkedin: "https://www.linkedin.com/in/jonas-m%C3%BCller-841ab6213"
 
 nav:
   - title: About
