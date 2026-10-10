@@ -1,0 +1,15 @@
+{% comment %}
+Usage in a post or note:
+  {% include figure.html src="/assets/img/posts/plot.png" alt="What it shows" caption="Figure 1. *Markdown* works here." %}
+  {% include figure.html src="/assets/video/clip.mp4" caption="Videos loop silently." width="80%" %}
+Options: src (required), alt, caption, width, wide (true = wider than the text column).
+{% endcomment %}
+{% assign ext = include.src | split: "." | last | downcase %}
+<figure class="figure{% if include.wide %} figure-wide{% endif %}"{% if include.width %} style="max-width: {{ include.width }}"{% endif %}>
+  {% if ext == "mp4" or ext == "webm" %}
+  <video src="{{ include.src | relative_url }}" autoplay muted loop playsinline controls preload="metadata"></video>
+  {% else %}
+  <a href="{{ include.src | relative_url }}"><img src="{{ include.src | relative_url }}" alt="{{ include.alt | default: include.caption | strip_html | escape }}" loading="lazy"></a>
+  {% endif %}
+  {% if include.caption %}<figcaption>{{ include.caption | markdownify | remove: '<p>' | remove: '</p>' }}</figcaption>{% endif %}
+</figure>

@@ -1,0 +1,13 @@
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© {{ 'now' | date: '%Y' }} {{ site.author.name }}</span>
+    <span class="sep">·</span>
+    <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+    {% if site.author.github and site.author.github != "" %}<span class="sep">·</span><a href="https://github.com/{{ site.author.github }}">GitHub</a>{% endif %}
+  </div>
+</footer>
+<script>
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('video[autoplay]').forEach(function (v) { v.removeAttribute('autoplay'); v.pause(); });
+  }
+</script>

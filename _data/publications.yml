@@ -1,0 +1,14 @@
+# Newest first. Only "title" is required; empty fields are hidden.
+# "image" is an optional teaser figure shown next to the entry.
+# Wrap your own name in ** ** in "authors" to make it bold.
+# Example entry, taken from your RadProPoser repo. Fill in or correct the rest.
+- title: "RadProPoser: Uncertainty-Aware Human Pose Estimation and Activity Classification from Raw Radar Data"
+  authors: "**Jonas Müller**, et al."   # TODO: full author list
+  image: /assets/img/pubs/radproposer.png
+  venue: ""                             # TODO: e.g. "IJCNN 2025"
+  year: ""                              # TODO
+  links:
+    paper: ""
+    arxiv: ""
+    code: "https://github.com/jonasmueler"   # TODO: point at the actual repo
+    bibtex: ""

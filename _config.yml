@@ -1,0 +1,65 @@
+# Site settings. Edit these first.
+title: Jonas Müller
+description: Researcher in machine learning, working on radar sensing, human motion and probabilistic models.
+url: "https://jonasmueler.github.io"
+baseurl: ""
+lang: en
+
+author:
+  name: Jonas Müller
+  # Fill in what you want shown on the home page. Empty values are hidden.
+  photo: ""            # e.g. /assets/img/profile.jpg
+  email: ""
+  github: jonasmueler
+  scholar: ""          # full Google Scholar profile URL
+  orcid: ""            # e.g. 0000-0000-0000-0000
+  linkedin: ""         # full LinkedIn URL
+
+# Looping animation behind the name on the home page. Set hero_video to "" to turn it off.
+hero_video: /assets/video/loss-surface.mp4
+hero_poster: /assets/video/loss-surface-poster.jpg
+
+nav:
+  - title: About
+    url: /
+  - title: Publications
+    url: /publications/
+  - title: Blog
+    url: /blog/
+  - title: Notes
+    url: /notes/
+  - title: CV
+    url: /cv/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: mathjax   # emits \( \) and \[ \]; KaTeX renders them on pages with math: true
+  syntax_highlighter: rouge
+
+permalink: /blog/:year/:title/
+
+collections:
+  notes:
+    output: true
+    permalink: /notes/:name/
+
+defaults:
+  - scope: { path: "", type: posts }
+    values: { layout: post }
+  - scope: { path: "", type: notes }
+    values: { layout: post }
+  - scope: { path: "" }
+    values: { layout: page }
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle
