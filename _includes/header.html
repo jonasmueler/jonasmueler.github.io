@@ -1,6 +1,6 @@
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    {% unless page.hero %}<a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>{% endunless %}
     <nav class="site-nav">
       {% for item in site.nav %}
         {% if item.url == '/' %}

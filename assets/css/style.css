@@ -54,7 +54,7 @@ h3 { font-size: 1.1rem; margin-top: 1.8em; }
 .header-inner { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; padding-top: 18px; padding-bottom: 14px; }
 .site-title { font-family: var(--serif); font-size: 1.2rem; font-weight: 600; color: var(--fg); }
 .site-title:hover { text-decoration: none; }
-.site-nav { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 0.95rem; }
+.site-nav { margin-left: auto; display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 0.95rem; }
 .site-nav a { color: var(--muted); }
 .site-nav a[aria-current="page"] { color: var(--fg); font-weight: 600; }
 
@@ -172,20 +172,10 @@ pre code { background: none; padding: 0; font-size: 0.85rem; }
 .pub-image img { width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--line); background: #fff; }
 @media (max-width: 560px) { .pub.has-image { grid-template-columns: 1fr; gap: 10px; } }
 
-/* home: two columns on wide screens */
+/* home: one readable column under the banner */
 .has-hero main.wrap { padding-top: 56px; }
-.home-grid { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); gap: 64px; align-items: start; }
-.home-grid h2 { margin-top: 0.4em; }
-.home-side { border-left: 1px solid var(--line); padding-left: 40px; }
-.home-side h2 { font-size: 1.15rem; }
-.home-side h2 + ul { margin-bottom: 2em; }
-.home-side .post-list { margin-bottom: 0.6em; }
-.home-side .post-list li { display: flex; flex-direction: column; }
-.home-side .post-list-date { margin-left: 0; }
-.home-side .more { font-size: 0.95rem; margin-top: 0; }
-.interests { list-style: none; padding: 0; margin: 1.4em 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.home-about { max-width: 760px; }
+.home-about h2 { margin-top: 1.6em; }
+.home-about h2:first-child { margin-top: 0.4em; }
+.interests { list-style: none; padding: 0; margin: 1.2em 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
 .interests li { padding: 4px 14px; border-radius: 999px; border: 1px solid var(--line); font-size: 0.92rem; }
-@media (max-width: 860px) {
-  .home-grid { grid-template-columns: 1fr; gap: 16px; }
-  .home-side { border-left: 0; padding-left: 0; }
-}
