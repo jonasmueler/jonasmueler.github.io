@@ -4,7 +4,9 @@ title: About
 hero: true
 ---
 <div class="home-about">
-<section class="home-col" markdown="1">
+<section class="home-col about-col">
+{% if site.author.photo and site.author.photo != "" %}<img class="about-photo" src="{{ site.author.photo | relative_url }}" alt="{{ site.author.name }}">{% endif %}
+<div markdown="1">
 
 ## About
 
@@ -12,6 +14,7 @@ I am associated with the **Institute for Artificial Intelligence in Medicine** a
 and a PhD researcher at the [Department of Artificial Intelligence in Biomedical Engineering (AIBE)](https://aibe.tf.fau.de/)
 at Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU), where I also lead the **Applied Machine Learning Group**.
 
+</div>
 </section>
 <section class="home-col" markdown="1">
 
