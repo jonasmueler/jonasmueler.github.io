@@ -5,7 +5,7 @@
 # Papers that are not published yet ("to appear") are listed without links to full text (no pdf, no arxiv).
 
 - title: "You Only Flow Once: Calibrated and Real-Time Radar Pose Estimation with Multi-Hypothesis Normalizing Flows"
-  image: /assets/img/pubs/yofo.png
+  image: /assets/img/pubs/yofo-2.png
   authors: "**Jonas Leo Mueller**, Sebastian Hoefler, Dario Zanca, Naga Venkata Sai Jitin Jami, Thomas Altstidl, Bjoern M. Eskofier"
   venue: "IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), to appear"
   year: 2027
@@ -18,7 +18,7 @@
   year: 2026
 
 - title: "Learning Biomechanically Plausible Human Motion from Sparse Radar Point Clouds"
-  image: /assets/img/pubs/biomech-radar.png
+  image: /assets/img/pubs/biomech-radar-2.png
   authors: "**Jonas Leo Mueller**, Markus Gambietz, Alexander Weiss, Daniel Krauss, Bjoern M. Eskofier"
   venue: "arXiv preprint arXiv:2608.03637"
   year: 2026
@@ -45,7 +45,7 @@
     pdf: "https://arxiv.org/pdf/2508.03578"
 
 - title: "Advanced Millimeter Wave Radar-Based Human Pose Estimation Enabled by a Deep Learning Neural Network Trained With Optical Motion Capture Ground Truth Data"
-  image: /assets/img/pubs/jmw-radar-pose.png
+  image: /assets/img/pubs/jmw-radar-pose-2.png
   authors: "Lukas Engel, **Jonas Mueller**, Eduardo Javier Feria Rendon, Eva Dorschky, Daniel Krauss, Ingrid Ullmann, Bjoern M. Eskofier, Martin Vossiek"
   venue: "IEEE Journal of Microwaves 5(2), 373–387"
   year: 2025
