@@ -1,7 +1,7 @@
 {% comment %}
 Renders a list of publications. Usage:
-  {% include pub-list.html pubs=site.data.publications %}                  (as on /publications/)
   {% include pub-list.html pubs=site.data.publications show_year=true %}   (home page: year after the venue)
+  {% include pub-list.html pubs=group.items %}                             (inside a year loop: no year)
 {% endcomment %}
 <ol class="pubs">
 {% for p in include.pubs %}
