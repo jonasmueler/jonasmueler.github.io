@@ -1,5 +1,5 @@
 # Newest first. "text" takes Markdown. Shown in the News section of the home page.
 - date: "Oct 2026"
-  text: "**You Only Flow Once**, calibrated real-time radar pose estimation with multi-hypothesis normalizing flows, was accepted at [WACV 2027](https://arxiv.org/abs/2608.09579)."
+  text: "**You Only Flow Once**, calibrated real-time radar pose estimation with multi-hypothesis normalizing flows, was accepted at WACV 2027."
 - date: "Sep 2026"
   text: "Our position paper **AI Behavioral Evaluation Should Be Grounded in Psychophysics Across Marr's Levels** was accepted at NeurIPS 2026 (Position Paper Track)."

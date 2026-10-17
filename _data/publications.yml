@@ -2,15 +2,14 @@
 # Wrap your own name in ** ** in "authors" to make it bold.
 # "image" is an optional teaser figure shown next to the entry (put it in assets/img/pubs/).
 # Link labels are free text; common ones: paper, arxiv, pdf, code, project, bibtex.
+# Papers that are not published yet ("to appear") are listed without links to full text (no pdf, no arxiv).
 
 - title: "You Only Flow Once: Calibrated and Real-Time Radar Pose Estimation with Multi-Hypothesis Normalizing Flows"
   image: /assets/img/pubs/yofo.png
   authors: "**Jonas Leo Mueller**, Sebastian Hoefler, Dario Zanca, Naga Venkata Sai Jitin Jami, Thomas Altstidl, Bjoern M. Eskofier"
   venue: "IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), to appear"
   year: 2027
-  links:
-    arxiv: "https://arxiv.org/abs/2608.09579"
-    pdf: "https://arxiv.org/pdf/2608.09579"
+  # links (arxiv/pdf) go in once the paper is published
 
 - title: "AI Behavioral Evaluation Should Be Grounded in Psychophysics Across Marr's Levels"
   image: /assets/img/pubs/ai-psychophysics.png
