@@ -73,7 +73,7 @@ main.wrap { padding-top: 40px; padding-bottom: 64px; }
 /* lists */
 .news, .post-list { list-style: none; padding: 0; margin: 0; }
 .news li { display: flex; gap: 16px; padding: 6px 0; }
-.news-date { color: var(--muted); font-variant-numeric: tabular-nums; min-width: 72px; flex-shrink: 0; }
+.news-date { color: var(--muted); font-variant-numeric: tabular-nums; min-width: 84px; flex-shrink: 0; }
 .post-list li { padding: 8px 0; border-bottom: 1px solid var(--line); }
 .post-list li:last-child { border-bottom: 0; }
 .post-list-date { color: var(--muted); font-size: 0.9rem; margin-left: 8px; white-space: nowrap; }
@@ -173,11 +173,14 @@ pre code { background: none; padding: 0; font-size: 0.85rem; }
 .pub-image img { width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--line); background: #fff; }
 @media (max-width: 560px) { .pub.has-image { grid-template-columns: 1fr; gap: 10px; } }
 
-/* home: one readable column under the banner */
+/* home: About | Research grid under the banner, then News and Publications */
 .has-hero main.wrap { padding-top: 56px; }
 .home-about { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 72px; max-width: 1320px; }
 .home-about h2 { margin-top: 0.4em; }
 @media (max-width: 900px) { .home-about { grid-template-columns: 1fr; } }
+.home-section { max-width: 1320px; }
+.home-section h2 { margin-top: 2.2em; }
+.home-section .pubs { margin-top: 0.4em; }
 .interests { list-style: none; padding: 0; margin: 1.2em 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
 .interests li { padding: 4px 14px; border-radius: 999px; border: 1px solid var(--line); font-size: 0.92rem; }
 

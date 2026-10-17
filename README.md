@@ -27,6 +27,7 @@ Personal research site. Built by GitHub Pages with Jekyll; no build step needed 
 | add a video course          | `_data/courses.yml` + thumbnail in `assets/img/courses/` |
 | add learning material       | new file in `_materials/` (copy `_materials/example-template.md`) |
 | add a paper                 | `_data/publications.yml` (+ teaser in `assets/img/pubs/`) |
+| post a news item            | `_data/news.yml`                                       |
 | update your CV              | `_data/cv.yml`                                         |
 | change the look             | `assets/css/style.css`                                 |
 | change the home banner      | `assets/js/surface.js` (see below)                     |

@@ -31,3 +31,17 @@ The problems I work on include:
 
 </section>
 </div>
+
+<section class="home-section home-news">
+  <h2>News</h2>
+  <ul class="news">
+  {% for n in site.data.news %}
+    <li><span class="news-date">{{ n.date }}</span><span>{{ n.text | markdownify | remove: '<p>' | remove: '</p>' }}</span></li>
+  {% endfor %}
+  </ul>
+</section>
+
+<section class="home-section home-pubs">
+  <h2>Publications</h2>
+  {% include pub-list.html pubs=site.data.publications show_year=true %}
+</section>

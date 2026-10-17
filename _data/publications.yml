@@ -4,6 +4,7 @@
 # Link labels are free text; common ones: paper, arxiv, pdf, code, project, bibtex.
 
 - title: "You Only Flow Once: Calibrated and Real-Time Radar Pose Estimation with Multi-Hypothesis Normalizing Flows"
+  image: /assets/img/pubs/yofo.png
   authors: "**Jonas Leo Mueller**, Sebastian Hoefler, Dario Zanca, Naga Venkata Sai Jitin Jami, Thomas Altstidl, Bjoern M. Eskofier"
   venue: "IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), to appear"
   year: 2027
@@ -12,11 +13,13 @@
     pdf: "https://arxiv.org/pdf/2608.09579"
 
 - title: "AI Behavioral Evaluation Should Be Grounded in Psychophysics Across Marr's Levels"
+  image: /assets/img/pubs/ai-psychophysics.png
   authors: "**Jonas Leo Müller**, Bernhard Egger, Marco Valentino, Pasquale Minervini, Antonio Rizzo, Björn Eskofier, Dario Zanca"
   venue: "Conference on Neural Information Processing Systems (NeurIPS), Position Paper Track, to appear"
   year: 2026
 
 - title: "Learning Biomechanically Plausible Human Motion from Sparse Radar Point Clouds"
+  image: /assets/img/pubs/biomech-radar.png
   authors: "**Jonas Leo Mueller**, Markus Gambietz, Alexander Weiss, Daniel Krauss, Bjoern M. Eskofier"
   venue: "arXiv preprint arXiv:2608.03637"
   year: 2026
@@ -25,13 +28,16 @@
     pdf: "https://arxiv.org/pdf/2608.03637"
 
 - title: "Understanding Cross-Model Perceptual Invariances through Ensemble Metamers"
+  image: /assets/img/pubs/ensemble-metamers.png
   authors: "Lukas Boehm, **Jonas Leo Mueller**, Christoffer Loeffler, Leo Schwinn, Bjoern Eskofier, Dario Zanca"
   venue: "Neural Computing and Applications 38(11), article 430"
   year: 2026
   links:
     paper: "https://doi.org/10.1007/s00521-026-12145-5"
+    arxiv: "https://arxiv.org/abs/2504.01739"
 
 - title: "RadProPoser: Probabilistic Radar Tensor Human Pose Estimation That Knows Its Limits"
+  image: /assets/img/pubs/radproposer.png
   authors: "**Jonas Leo Mueller**, Lukas Engel, Eva Dorschky, Daniel Krauss, Ingrid Ullmann, Martin Vossiek, Bjoern M. Eskofier"
   venue: "International Joint Conference on Neural Networks (IJCNN)"
   year: 2026
@@ -40,6 +46,7 @@
     pdf: "https://arxiv.org/pdf/2508.03578"
 
 - title: "Advanced Millimeter Wave Radar-Based Human Pose Estimation Enabled by a Deep Learning Neural Network Trained With Optical Motion Capture Ground Truth Data"
+  image: /assets/img/pubs/jmw-radar-pose.png
   authors: "Lukas Engel, **Jonas Mueller**, Eduardo Javier Feria Rendon, Eva Dorschky, Daniel Krauss, Ingrid Ullmann, Bjoern M. Eskofier, Martin Vossiek"
   venue: "IEEE Journal of Microwaves 5(2), 373–387"
   year: 2025
@@ -47,6 +54,7 @@
     paper: "https://doi.org/10.1109/JMW.2025.3535525"
 
 - title: "End-to-End Learning for Human Pose Estimation from Raw Millimeter Wave Radar Data"
+  image: /assets/img/pubs/asilomar-e2e.png
   authors: "**Jonas Mueller**, Lukas Engel, Daniel Krauss, Ingrid Ullmann, Martin Vossiek, Bjoern M. Eskofier, Eva Dorschky"
   venue: "58th Asilomar Conference on Signals, Systems, and Computers, 1495–1499"
   year: 2024

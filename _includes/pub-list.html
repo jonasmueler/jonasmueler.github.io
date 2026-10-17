@@ -1,0 +1,23 @@
+{% comment %}
+Renders a list of publications. Usage:
+  {% include pub-list.html pubs=site.data.publications %}                  (as on /publications/)
+  {% include pub-list.html pubs=site.data.publications show_year=true %}   (home page: year after the venue)
+{% endcomment %}
+<ol class="pubs">
+{% for p in include.pubs %}
+  <li class="pub{% if p.image and p.image != "" %} has-image{% endif %}">
+    {% if p.image and p.image != "" %}<a class="pub-image" href="{{ p.image | relative_url }}"><img src="{{ p.image | relative_url }}" alt="" loading="lazy"></a>{% endif %}
+    <div class="pub-body">
+    <div class="pub-title">{{ p.title }}</div>
+    {% if p.authors and p.authors != "" %}<div class="pub-authors">{{ p.authors | markdownify | remove: '<p>' | remove: '</p>' }}</div>{% endif %}
+    {% assign y = p.year | append: "" %}
+    {% if p.venue and p.venue != "" %}<div class="pub-venue">{{ p.venue }}{% if include.show_year and p.year %}{% unless p.venue contains y %}, {{ p.year }}{% endunless %}{% endif %}</div>{% endif %}
+    {% if p.links %}
+    <div class="pub-links">
+      {% for l in p.links %}{% if l[1] != "" %}<a href="{{ l[1] }}">{{ l[0] }}</a>{% endif %}{% endfor %}
+    </div>
+    {% endif %}
+    </div>
+  </li>
+{% endfor %}
+</ol>
