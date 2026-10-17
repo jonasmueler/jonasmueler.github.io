@@ -145,8 +145,8 @@ pre code { background: none; padding: 0; font-size: 0.85rem; }
     linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 20%);
 }
 .hero-inner { width: 100%; }
-.hero-text { max-width: 560px; padding-top: 48px; }
-.hero .intro-name { color: #fff; margin: 0; font-size: clamp(2.5rem, 5.2vw, 4.4rem); letter-spacing: -0.01em; text-shadow: 0 2px 30px rgba(0,0,0,0.6); }
+.hero-text { max-width: 760px; padding-top: 48px; }
+.hero .intro-name { color: #fff; margin: 0; font-size: clamp(2rem, 4.2vw, 3.6rem); letter-spacing: -0.01em; white-space: nowrap; text-shadow: 0 2px 30px rgba(0,0,0,0.6); }
 .hero .intro-role { color: #c3cfdd; margin: 6px 0 16px; font-size: 1.2rem; }
 .hero .profile-links a { color: #a5c8f5; }
 .hero .profile-photo { width: 96px; height: 96px; margin-bottom: 16px; border: 2px solid rgba(255,255,255,0.25); }
