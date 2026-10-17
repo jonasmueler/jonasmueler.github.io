@@ -1,12 +1,12 @@
 # Site settings. Edit these first.
-title: Jonas Müller
+title: Jonas Leo Müller
 description: Researcher in machine learning, working on radar sensing, human motion and probabilistic models.
 url: "https://jonasmueler.github.io"
 baseurl: ""
 lang: en
 
 author:
-  name: Jonas Müller
+  name: Jonas Leo Müller
   # Fill in what you want shown on the home page. Empty values are hidden.
   photo: ""            # e.g. /assets/img/profile.jpg
   email: "jonas.leo.mueller@fau.de"
