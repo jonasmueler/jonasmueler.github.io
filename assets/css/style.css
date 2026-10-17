@@ -149,7 +149,9 @@ pre code { background: none; padding: 0; font-size: 0.85rem; }
 .hero .intro-name { color: #fff; margin: 0; font-size: clamp(2rem, 4.2vw, 3.6rem); letter-spacing: -0.01em; white-space: nowrap; text-shadow: 0 2px 30px rgba(0,0,0,0.6); }
 .hero .intro-role { color: #c3cfdd; margin: 6px 0 16px; font-size: 1.2rem; }
 .hero .profile-links a { color: #a5c8f5; }
-.hero .profile-photo { width: 96px; height: 96px; margin-bottom: 16px; border: 2px solid rgba(255,255,255,0.25); }
+/* banner photo: portrait crop, rounded corners (not the round avatar used elsewhere) */
+.hero .profile-photo { width: 180px; height: 240px; border-radius: 10px; margin-bottom: 18px; border: 2px solid rgba(255,255,255,0.25); box-shadow: 0 8px 30px rgba(0,0,0,0.45); }
+@media (max-width: 560px) { .hero .profile-photo { width: 135px; height: 180px; margin-bottom: 12px; } }
 /* the header floats over the banner */
 .has-hero .site-header { position: absolute; top: 0; left: 0; right: 0; z-index: 5; border-bottom-color: rgba(255,255,255,0.08); }
 .has-hero .site-title { color: #fff; }
