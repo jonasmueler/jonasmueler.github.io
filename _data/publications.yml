@@ -16,6 +16,8 @@
   authors: "**Jonas Leo Müller**, Bernhard Egger, Marco Valentino, Pasquale Minervini, Antonio Rizzo, Björn Eskofier, Dario Zanca"
   venue: "Conference on Neural Information Processing Systems (NeurIPS), Position Paper Track, to appear"
   year: 2026
+  links:
+    alphaxiv: "https://www.alphaxiv.org/abs/2611.ai-evaluation-psychophysics-marr-levels"
 
 - title: "Learning Biomechanically Plausible Human Motion from Sparse Radar Point Clouds"
   image: /assets/img/pubs/biomech-radar-2.png
