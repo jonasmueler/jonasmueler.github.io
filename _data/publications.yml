@@ -2,14 +2,27 @@
 # Wrap your own name in ** ** in "authors" to make it bold.
 # "image" is an optional teaser figure shown next to the entry (put it in assets/img/pubs/).
 # Link labels are free text; common ones: paper, arxiv, pdf, code, project, bibtex.
-# Papers that are not published yet ("to appear") are listed without links to full text (no pdf, no arxiv).
+# Papers that are not published yet ("to appear") get no full-text links until a public preprint exists; then link the preprint.
+
+- title: "A Universal Raw-IQ Radar Encoder for Cross-Sensor Human Sensing"
+  image: /assets/img/pubs/radar-encoder.png
+  authors: "**Jonas Leo Mueller**, Dario Zanca, Sebastian Hoefler, Jan Petermann, Thomas Altstidl, Naga Venkata Sai Jitin Jami, Emmanuelle Salin, Bjoern M. Eskofier"
+  venue: "IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), to appear"
+  year: 2027
+  links:
+    arxiv: "https://arxiv.org/abs/2611.04534"
+    pdf: "https://arxiv.org/pdf/2611.04534"
+    code: "https://github.com/jonasmueler/UniversalRadarEncoder_WACV"
 
 - title: "You Only Flow Once: Calibrated and Real-Time Radar Pose Estimation with Multi-Hypothesis Normalizing Flows"
   image: /assets/img/pubs/yofo-2.png
   authors: "**Jonas Leo Mueller**, Sebastian Hoefler, Dario Zanca, Naga Venkata Sai Jitin Jami, Thomas Altstidl, Bjoern M. Eskofier"
   venue: "IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), to appear"
   year: 2027
-  # links (arxiv/pdf) go in once the paper is published
+  links:
+    arxiv: "https://arxiv.org/abs/2608.09579"
+    pdf: "https://arxiv.org/pdf/2608.09579"
+    code: "https://github.com/jonasmueler/YouOnlyFlowOnce_WACV"
 
 - title: "AI Behavioral Evaluation Should Be Grounded in Psychophysics Across Marr's Levels"
   image: /assets/img/pubs/ai-psychophysics.png
@@ -43,8 +56,21 @@
   venue: "International Joint Conference on Neural Networks (IJCNN)"
   year: 2026
   links:
+    paper: "https://doi.org/10.1109/IJCNN69854.2026.11729073"
     arxiv: "https://arxiv.org/abs/2508.03578"
     pdf: "https://arxiv.org/pdf/2508.03578"
+    code: "https://github.com/jonasmueler/RadProPoser_IJCNN"
+
+- title: "Stratify or Die: Rethinking Data Splits in Image Segmentation"
+  image: /assets/img/pubs/stratify-or-die.png
+  authors: "Naga Venkata Sai Jitin Jami, Thomas Altstidl, **Jonas Leo Mueller**, Jindong Li, Dario Zanca, Bjoern Eskofier, Heike Leutheuser"
+  venue: "Advances in Neural Information Processing Systems 38 (NeurIPS)"
+  year: 2025
+  links:
+    arxiv: "https://arxiv.org/abs/2509.21056"
+    pdf: "https://arxiv.org/pdf/2509.21056"
+    code: "https://github.com/jitinjami/SemanticStratification"
+    project: "https://jitinjami.github.io/stratify/"
 
 - title: "Advanced Millimeter Wave Radar-Based Human Pose Estimation Enabled by a Deep Learning Neural Network Trained With Optical Motion Capture Ground Truth Data"
   image: /assets/img/pubs/jmw-radar-pose-2.png
@@ -61,3 +87,13 @@
   year: 2024
   links:
     paper: "https://doi.org/10.1109/IEEECONF60004.2024.10942688"
+
+- title: "Glacier Movement Prediction with Attention-based Recurrent Neural Networks and Satellite Data"
+  image: /assets/img/pubs/glacier-movement.png
+  authors: "**Jonas Müller**, Raphael Braun, Hendrik P. A. Lensch, Nicole Ludwig"
+  venue: "NeurIPS 2023 Workshop on Tackling Climate Change with Machine Learning"
+  year: 2023
+  links:
+    paper: "https://www.climatechange.ai/papers/neurips2023/42"
+    pdf: "https://ccai-papers.s3.us-east-1.amazonaws.com/neurips2023/42/paper.pdf"
+    code: "https://github.com/jonasmueler/Glaciers_NeurIPS"
