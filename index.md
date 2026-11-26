@@ -13,7 +13,7 @@ hero: true
 I am associated with the **Institute for Artificial Intelligence in Medicine** at LMU Munich
 and a PhD researcher at the [Department of Artificial Intelligence in Biomedical Engineering (AIBE)](https://aibe.tf.fau.de/)
 at Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU).
-I lead **VIEW**, the **Visual IntelligencE Workgroup**, based mainly at FAU and also at LMU.
+I supervise our group **VIEW**, the **Visual IntelligencE Workgroup**, based mainly at FAU and also at LMU.
 
 </div>
 </section>
